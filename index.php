@@ -11,7 +11,13 @@
 
     $url = explode('?' , $_SERVER['REQUEST_URI'])[0];
     
+    // here we are creating a new variable 
+    // called router we are assigning it 
+    // a class instance of Router
+    // a class instantiation is denoted 
+    // by the keyword *new*
     $router = new Sdk\Http\Router();
-
-    var_dump($router);
     
+    // calling the resolveRoute function on the router and 
+    // passing the variable url
+    $router->resolveRoute($url);
